@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz!</title>
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <div class="ueberschrift">Quiz!</div>
+    <div class="frage">Welche ist die richtige Abkürzung?</div>
+    <div class="zeile" id="end">
+      <div class="fragencounter" id="end">
+        Frage:
+        <div id="counter">{{ frage }}</div>
+        / 4
+      </div>
+      <div class="fragencounter" id="end">
+        Punkte:
+        <div id="counter">{{ punktestand }}</div>
+      </div>
+    </div>
+    <div class="fragenNavigation">
+      <div
+        style="border-radius: 20px 0 0 20px;"
+        (click)="Frageaendern1()"
+        class="nav"
+      >
+        1
+      </div>
+      <div (click)="Frageaendern2()" class="nav">2</div>
+      <div class="nav" (click)="Frageaendern3()">3</div>
+      <div
+        (click)="Frageaendern4()"
+        style="border-radius: 0 20px 20px 0;"
+        class="nav"
+      >
+        4
+      </div>
+    </div>
+
+    <div id="ant1" class="antworten">
+      <div class="zeile">
+        <div class="antwort" (click)="richtigeantwort()">AEG1</div>
+        <div class="antwort" (click)="falscheantwort()">AES</div>
+      </div>
+      <div class="zeile">
+        <div class="antwort" (click)="falscheantwort()">AGE</div>
+        <div class="antwort" (click)="falscheantwort()">AGG</div>
+      </div>
+    </div>
+
+    <div (click)="richtig_schliessen()" class="richtig" *ngIf="richtig">
+      <b>Das ist Richtig!</b>
+      <p style="font-size:large">(Klicken zur nächsten Frage)</p>
+    </div>
+
+    <div (click)="falsch_schliessen()" class="falsch" *ngIf="falsch">
+      <b>Das ist leider Falsch.</b>
+      <p style="font-size:large">(Klicken für weiteren Versuch)</p>
+    </div>
+
+    <div id="ant2" class="antworten">
+      <div class="zeile">
+        <div class="antwort" (click)="falscheantwort()">VBV</div>
+        <div class="antwort" (click)="richtigeantwort()">BVB2</div>
+      </div>
+      <div class="zeile">
+        <div class="antwort" (click)="falscheantwort()">VVB</div>
+        <div class="antwort" (click)="falscheantwort()">BvB</div>
+      </div>
+    </div>
+    <div (click)="falsch_schliessen()" class="richtig" *ngIf="richtig_zwei">
+      <b>Das ist Richtig!</b>
+      <p style="font-size:large">
+        (Klicken für <b style="color:red">Neustart</b>)
+      </p>
+    </div>
+
+    <div (click)="richtig_schliessen()" class="falsch" *ngIf="falsch_zwei">
+      <b>Das ist leider Falsch.</b>
+      <p style="font-size:large">(Klicken für weiteren Versuch)</p>
+    </div>
+
+    <div id="ant3" class="antworten">
+      <div class="zeile">
+        <div class="antwort" (click)="richtigeantwort()">AEG3</div>
+        <div class="antwort" (click)="falscheantwort()">AES</div>
+      </div>
+      <div class="zeile">
+        <div class="antwort" (click)="falscheantwort()">AGE</div>
+        <div class="antwort" (click)="falscheantwort()">AGG</div>
+      </div>
+    </div>
+
+    <div (click)="richtig_schliessen()" class="richtig" *ngIf="richtig">
+      <b>Das ist Richtig!</b>
+      <p style="font-size:large">(Klicken zur nächsten Frage)</p>
+    </div>
+
+    <div (click)="falsch_schliessen()" class="falsch" *ngIf="falsch">
+      <b>Das ist leider Falsch.</b>
+      <p style="font-size:large">(Klicken für weiteren Versuch)</p>
+    </div>
+    <div id="ant4" class="antworten">
+      <div class="zeile">
+        <div class="antwort" (click)="richtigeantwort()">AEG4</div>
+        <div class="antwort" (click)="falscheantwort()">AES</div>
+      </div>
+      <div class="zeile">
+        <div class="antwort" (click)="falscheantwort()">AGE</div>
+        <div class="antwort" (click)="falscheantwort()">AGG</div>
+      </div>
+    </div>
+
+    <div (click)="richtig_schliessen()" class="richtig" *ngIf="richtig">
+      <b>Das ist Richtig!</b>
+      <p style="font-size:large">(Klicken zur nächsten Frage)</p>
+    </div>
+
+    <div (click)="falsch_schliessen()" class="falsch" *ngIf="falsch">
+      <b>Das ist leider Falsch.</b>
+      <p style="font-size:large">(Klicken für weiteren Versuch)</p>
+    </div>
+    <div id="ant5" class="antworten">
+      <p>Das Quiz ist zuende.</p>
+      <div>
+        Du hast
+        <div id="counter">{{ punktestand }}</div>
+        Punkte erreicht.
+      </div>
+    </div>
+  </body>
+</html>

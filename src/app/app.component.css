@@ -1,0 +1,149 @@
+.frage {
+  font-size: 230%;
+  text-align: center;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  width: 70%;
+  background-color: lightblue;
+  cursor: default;
+}
+.fragenNavigation {
+  visibility: collapse;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.nav {
+  padding: 20px;
+  text-align: center;
+  width: 19%;
+  border: blue 2px solid;
+  cursor: pointer;
+  background-color: lightblue;
+}
+.fragencounter {
+  font-size: 230%;
+  text-align: center;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  width: 30%;
+  background-color: lightblue;
+  cursor: default;
+  height: 100%;
+}
+#counter {
+  color: rgb(0, 140, 255);
+}
+.ueberschrift {
+  font-size: 500%;
+  cursor: default;
+  text-align: center;
+  border-radius: 20px;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  width: 90%;
+  margin-top: 20px;
+  background-image: url(https://pixabay.com/get/gb08de82b6030f0a9085129b49e8e2f30b84decd8a01fb0f52265b66d8f100c8f6cb520e23af7cb3599c20a41e142d520_640.jpg);
+}
+.zeile {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+}
+.antwort {
+  font-size: 230%;
+  text-align: center;
+  margin: 20px;
+  border-radius: 20px;
+  width: 50%;
+  cursor: pointer;
+  background-color: lightblue;
+  padding: 20px;
+}
+.antwort:hover {
+  background-color: rgb(0, 217, 255);
+}
+.antworten {
+  margin: 0;
+  text-align: center;
+  display: block;
+  position: absolute;
+  max-width: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+body {
+  margin: 0;
+  background-image: linear-gradient(rgb(0, 0, 163), rgb(0, 255, 221));
+  position: absolute;
+  height: 200%;
+  width: 100%;
+}
+.richtig {
+  background-color: rgb(0, 159, 0);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 700%;
+  text-align: center;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  max-width: 100%;
+}
+.falsch {
+  background-color: brown;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 700%;
+  text-align: center;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+title {
+  font-size: 500%;
+}
+body {
+  text-align: center;
+}
+#zwei {
+  visibility: hidden;
+  position: absolute;
+  top: 450px;
+  width: 100%;
+}
+#eins {
+  visibility: visible;
+  position: absolute;
+}
+#ant2 {
+  visibility: hidden;
+}
+#ant3 {
+  visibility: hidden;
+}
+#ant4 {
+  visibility: hidden;
+}
+#ant5 {
+  visibility: hidden;
+  font-size: 230%;
+  text-align: center;
+  margin: 20px;
+  border-radius: 20px;
+  width: 90%;
+  cursor: pointer;
+  background-color: lightblue;
+  padding: 20px;
+  top: 15%;
+}
